@@ -1,0 +1,29 @@
+# Lean environment for the study branch. Upstream's environment.yml (full Anaconda
+# 2023.03 bundle) is left untouched so syncs with upstream stay conflict-free.
+# Packages are the ones the notebooks import or pip-install.
+name: quantecon-intro
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  - pandas>=2.1.4
+  - matplotlib
+  - seaborn
+  - statsmodels
+  - sympy
+  - numba
+  - networkx
+  - requests
+  - xlrd
+  - openpyxl
+  - plotly
+  - ipykernel
+  - pip
+  - pip:
+      - quantecon
+      - wbgapi
+      - yfinance
+      - pandas-datareader
+      - quantecon-book-networks==1.6

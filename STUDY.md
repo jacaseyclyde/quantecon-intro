@@ -36,8 +36,16 @@ for lectures you have finished, or take upstream's if the change matters.
 
 ## Environment
 
-Create the environment from `environment.yml` and start Jupyter from the repo
-root so the notebooks resolve their relative paths.
+Upstream's `environment.yml` installs the full Anaconda 2023.03 bundle and is
+left as is. The study branch uses a smaller environment with only the packages
+the notebooks need:
+
+```
+conda env create -f environment-study.yml
+conda activate quantecon-intro
+```
+
+In VS Code, pick the `quantecon-intro` kernel.
 
 ## Progress
 
