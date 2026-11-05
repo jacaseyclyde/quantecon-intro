@@ -11,8 +11,12 @@ https://github.com/QuantEcon/lecture-python-intro.notebooks.
 - `main` is an untouched mirror of upstream. Never commit to it.
 - `study` is the default branch, and all work goes here. Edit the notebooks in
   place, run the cells, and do the exercises.
+- Notebooks are grouped into numbered folders by the book's sections and
+  prefixed with the lecture number, for example
+  `10_stochastic_dynamics/43_monte_carlo.ipynb`. On `main` they keep
+  upstream's flat layout.
 - See what you changed in a notebook with
-  `git diff main..study -- monte_carlo.ipynb`.
+  `git diff main:monte_carlo.ipynb study:10_stochastic_dynamics/43_monte_carlo.ipynb`.
 
 ## Syncing with upstream
 
@@ -25,7 +29,9 @@ git fetch origin
 git switch study && git merge origin/main
 ```
 
-Expect merge conflicts only in notebooks you have edited. Keep your version
+Git follows the renames, so upstream edits land in the section folders. A
+lecture that upstream adds will appear at the repo root; move it into its
+section by hand. Expect merge conflicts only in notebooks you have edited. Keep your version
 for lectures you have finished, or take upstream's if the change matters.
 
 ## Environment
