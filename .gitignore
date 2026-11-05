@@ -1,0 +1,11 @@
+
+# AI assistant context (local only)
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+docs/context/
+AGENTS.md
+.cursor/
+.cursorrules
+.github/copilot-instructions.md
+.aider*
