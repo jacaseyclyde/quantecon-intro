@@ -9,3 +9,8 @@ AGENTS.md
 .cursorrules
 .github/copilot-instructions.md
 .aider*
+
+# Downloaded data (re-fetch with archive/quantecon-notebooks/scripts/fetch_data.py)
+archive/quantecon-notebooks/data/**
+!archive/quantecon-notebooks/data/**/
+!archive/quantecon-notebooks/data/**/.gitkeep

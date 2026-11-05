@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quantecon-workspace"
+version = "0.1.0"
+description = "Local workspace package and tooling for QuantEcon lecture work."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "ipykernel>=6.29",
+  "jupyterlab>=4.2",
+  "matplotlib>=3.9",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "quantecon>=0.8",
+  "scipy>=1.14",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.6",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qe_custom"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
